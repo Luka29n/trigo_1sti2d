@@ -69,14 +69,16 @@ try:
             elif rep == 2:
                 while True:
                     try:
-                        radian_to_degres(int(input("\nentrer le numérateur :")), int(input("entrer le dénominateur :")))
+                        rep = input("entrer la fraction : ").split("/")
+                        radian_to_degres(int(rep[0].strip("pi")), int(rep[1]))
                     except:
                         print("\nla valeur renseigné n'est \npas sous la bonne forme")
                         break
             elif rep == 3:
                 while True:
                     try:
-                        determination_principale(int(input("\nentrer le numérateur :")), int(input("entrer le dénominateur :")))
+                        rep = input("entrer la fraction : ").split("/")
+                        determination_principale(int(rep[0].strip("pi")), int(rep[1]))
                     except:
                         print("\nla valeur renseigné n'est \npas sous la bonne forme")
                         break
@@ -90,6 +92,3 @@ try:
             break
 except:
     pass
-
-
-    
